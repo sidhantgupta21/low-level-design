@@ -7,12 +7,12 @@ import designpattern.abstractfactory.computer.IKeyBoard;
 public class MacFactory implements IComputer {
 
     @Override
-    public IMouse getButton() {
+    public IMouse getMouse() {
         return new MacMouse();
     }
 
     @Override
-    public IKeyBoard getTextBox() {
+    public IKeyBoard getKeyboard() {
         return new MacKeyBoard();
     }
 }
