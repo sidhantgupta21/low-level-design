@@ -6,10 +6,10 @@ public class ComputerClient {
 
         IComputer computer = ComputerAbstractFactory.getComputerFactory("mac");
 
-        IMouse mouse = computer.getButton();
+        IMouse mouse = computer.getMouse();
         mouse.installMouse();
 
-        IKeyBoard keyBoard = computer.getTextBox();
+        IKeyBoard keyBoard = computer.getKeyboard();
         keyBoard.installKeyBoard();
 
     }

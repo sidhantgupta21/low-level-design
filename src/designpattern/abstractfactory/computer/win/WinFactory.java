@@ -7,12 +7,12 @@ import designpattern.abstractfactory.computer.IKeyBoard;
 public class WinFactory implements IComputer {
 
     @Override
-    public IMouse getButton() {
+    public IMouse getMouse() {
         return new WinMouse();
     }
 
     @Override
-    public IKeyBoard getTextBox() {
+    public IKeyBoard getKeyboard() {
         return new WinKeyBoard();
     }
 }
