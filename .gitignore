@@ -1,6 +1,9 @@
 /.idea
 /out
 
+/src/interviews
+
 *.class
 *.xml
 *.iml
+*.DS_Store
