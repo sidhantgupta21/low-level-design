@@ -1,5 +1,6 @@
-package machinecoding.gymbooking.customer.model;
+package machinecoding.gymbooking.booking.model;
 
+import machinecoding.gymbooking.customer.model.Customer;
 import machinecoding.gymbooking.gym.model.workout.AbstractWorkout;
 
 public class Booking {

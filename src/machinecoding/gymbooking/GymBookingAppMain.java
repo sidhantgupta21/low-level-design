@@ -2,8 +2,9 @@ package machinecoding.gymbooking;
 
 import machinecoding.gymbooking.common.model.Timing;
 import machinecoding.gymbooking.customer.model.Customer;
-import machinecoding.gymbooking.customer.repository.BookingRepository;
-import machinecoding.gymbooking.customer.service.BookingService;
+import machinecoding.gymbooking.booking.repository.BookingRepository;
+import machinecoding.gymbooking.booking.service.BookingService;
+import machinecoding.gymbooking.customer.repository.CustomerRepository;
 import machinecoding.gymbooking.customer.service.CustomerService;
 import machinecoding.gymbooking.gym.model.Gym;
 import machinecoding.gymbooking.gym.model.workout.WorkoutType;
@@ -35,7 +36,7 @@ public class GymBookingAppMain {
         workoutService.viewWorkoutSlots(WorkoutType.CARDIO);
 
 
-        CustomerService customerService = CustomerService.getInstance();
+        CustomerService customerService = CustomerService.getInstance(CustomerRepository.getInstance());
         Customer customer1 = customerService.createCustomer("sidhant", "sidhantgupta66@gmail.com");
         Customer customer2 = customerService.createCustomer("abc", "abc@gmail.com");
         List<Customer> customers = Arrays.asList(customer1, customer2);
