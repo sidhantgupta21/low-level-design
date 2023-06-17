@@ -1,6 +1,6 @@
-package machinecoding.gymbooking.customer.repository;
+package machinecoding.gymbooking.booking.repository;
 
-import machinecoding.gymbooking.customer.model.Booking;
+import machinecoding.gymbooking.booking.model.Booking;
 import machinecoding.gymbooking.customer.model.Customer;
 import machinecoding.gymbooking.gym.model.workout.AbstractWorkout;
 

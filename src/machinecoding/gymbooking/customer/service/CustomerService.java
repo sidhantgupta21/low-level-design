@@ -1,18 +1,22 @@
 package machinecoding.gymbooking.customer.service;
 
 import machinecoding.gymbooking.customer.model.Customer;
+import machinecoding.gymbooking.customer.repository.CustomerRepository;
 
 public class CustomerService {
 
     private static CustomerService instance = null;
+    private final CustomerRepository customerRepository;
 
-    private CustomerService() { }
+    private CustomerService(CustomerRepository customerRepository) {
+        this.customerRepository = customerRepository;
+    }
 
-    public static CustomerService getInstance() {
+    public static CustomerService getInstance(CustomerRepository customerRepository) {
         if (instance == null) {
             synchronized (CustomerService.class) {
                 if (instance == null) {
-                    instance = new CustomerService();
+                    instance = new CustomerService(customerRepository);
                 }
             }
         }
@@ -20,8 +24,6 @@ public class CustomerService {
     }
 
     public Customer createCustomer(String name, String email) {
-        return new Customer.CustomerBuilder(name)
-                            .withEmail(email)
-                            .build();
+        return customerRepository.saveCustomer(name, email);
     }
 }

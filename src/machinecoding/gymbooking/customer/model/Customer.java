@@ -3,11 +3,13 @@ package machinecoding.gymbooking.customer.model;
 public class Customer {
 
     public static class CustomerBuilder {
+        private int id;
         private String name;
         private String email;
         private String mobileNum;
 
-        public CustomerBuilder(String name) {
+        public CustomerBuilder(int id, String name) {
+            this.id = id;
             this.name = name;
         }
 
@@ -26,14 +28,20 @@ public class Customer {
         }
     }
 
+    private int id;
     private String name;
     private String email;
     private String mobile;
 
     private Customer(CustomerBuilder builder) {
+        this.id = builder.id;
         this.name = builder.name;
         this.email = builder.email;
         this.mobile = builder.mobileNum;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getName() {

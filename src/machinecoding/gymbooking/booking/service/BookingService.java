@@ -1,10 +1,10 @@
-package machinecoding.gymbooking.customer.service;
+package machinecoding.gymbooking.booking.service;
 
 import machinecoding.gymbooking.common.model.Timing;
 import machinecoding.gymbooking.common.service.LockService;
-import machinecoding.gymbooking.customer.model.Booking;
+import machinecoding.gymbooking.booking.model.Booking;
 import machinecoding.gymbooking.customer.model.Customer;
-import machinecoding.gymbooking.customer.repository.BookingRepository;
+import machinecoding.gymbooking.booking.repository.BookingRepository;
 import machinecoding.gymbooking.gym.model.workout.AbstractWorkout;
 import machinecoding.gymbooking.gym.model.workout.WorkoutType;
 import machinecoding.gymbooking.gym.service.WorkoutService;
